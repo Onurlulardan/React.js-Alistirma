@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import './style.css';
 
 
 import React from 'react';
@@ -8,19 +9,19 @@ import Form from "./Form";
 function Contacts() {
   const  [contacts, setContact] = useState([
     {
-      fullName: "Onur",
+      fullname: "Onur",
       phone_number: "123456"
     },
     {
-      fullName: "Burak",
+      fullname: "Burak",
       phone_number: "654321"
     },
     {
-      fullName: "Ahmet",
+      fullname: "Ahmet",
       phone_number: "6789123"
     },
     {
-      fullName: "Ecem",
+      fullname: "Ecem",
       phone_number: "789546"
     }
   ]);
@@ -29,7 +30,8 @@ function Contacts() {
     console.log(contacts);
   }, [contacts]);
 
-  return <div>
+  return <div id="container">
+    <h1>Contacts</h1>
       <List contacts={contacts}/>
       <Form addContact={setContact} contacts= {contacts}/>
   </div>;
